@@ -1,0 +1,9 @@
+FROM node:alpine
+
+WORKDIR '/opt/webserver'
+
+COPY package.json .
+RUN npm install @divyanshu013/inspirational-quotes
+COPY . .
+
+CMD ["npm", "start"]
